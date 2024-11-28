@@ -12,7 +12,7 @@
                 <a class="btnNav" href="about.php">Sobre o Apotecário</a>
             </li>
             <?php
-            if (isset($_SESSION['nome'])) {
+            if (isset($_SESSION['nomeAlquimista'])) {
             ?>
             <li class="nav-item">
                 <a class="btnNav" href="logout.php">Desmaterializar</a>

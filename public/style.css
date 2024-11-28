@@ -149,7 +149,7 @@ main {
 
 /* glass container */
 
-.glasscontainer, .secaoProduto {
+.glasscontainer, .secaoProduto, .usuarioNaoEncontrado, .login {
     background-color: var(--transparente);
 
     padding: 40px;
@@ -227,4 +227,56 @@ main {
 .btnAddCaldeirao:hover{
     color: var(--roxoescuro);
     background-color: var(--roxoclaro);
+}
+
+/* login / validar alquimista */
+
+.usuarioNaoEncontrado h2{
+    font-family: Yeseva One;
+    color: var(--roxoescuro);    
+}
+
+.usuarioNaoEncontrado .btnVoltarLogin{
+    color: var(--roxoclaro);
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.usuarioNaoEncontrado .btnVoltarLogin:hover{
+    color: var(--roxoescuro);
+}
+
+.formlogin{
+    width: 90%;
+    margin: auto;
+}
+
+.formlogin div.row {
+    margin: 20px;
+}
+
+.formlogin a {
+    color: var(--roxoclaro);
+}
+
+.formlogin a:hover {
+    color: var(--roxoescuro);
+}
+
+.btnMaterializar{
+    background-color: var(--verdeescuro);
+    color: var(--verdeclaro);
+    width: 150px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.btnMaterializar:hover{
+    background-color: var(--verdeclaro);
+    color: var(--verdeescuro);
 }

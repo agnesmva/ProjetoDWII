@@ -15,10 +15,10 @@ include 'components/header.php';
 ?>
 <main>
     <?php
-        if (isset($_SESSION['nome'])) {
-            $msg = 'Olá, $_SESSION[\'nome\']!';
+        if (isset($_SESSION['nomeAlquimista'])) {
+            $msg = 'Olá, '.$_SESSION['nomeAlquimista'].'!';
         }else{
-            $msg = 'Olá, anony!';
+            $msg = 'Olá, alquimista!';
         }
         include 'components/glasscontainer.php';
     ?>
