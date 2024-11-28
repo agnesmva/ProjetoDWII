@@ -1,6 +1,6 @@
 <?php
-include "include/functions.php";
-include "include/conection.php";
+include "admin/include/functions.php";
+include "admin/include/conexao.php";
 
 
 
@@ -68,7 +68,7 @@ include 'components/header.php';
             </tr>
         </table>
     <?php else: ?>
-        <p>Seu caldeirão está vazio! Adicione algumas poções mágicas.</p>
+        <p>Seu caldeirão está vazio! Adicione algumas poções mágicas.<a href="produto.php">Clique aqui</a> para adicionar.</p>
     <?php endif; ?>
 </main>
 
