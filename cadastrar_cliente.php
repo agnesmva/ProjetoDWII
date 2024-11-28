@@ -20,10 +20,9 @@ include "connection/conexao.php";
     $command->bindParam(":senhaUsuario", $senhaUsuario);
     $command->bindParam(":enderecoUsuario", $enderecoUsuario);
     $sucesso = $command->execute();
-    $sucesso = 0;
 
-    if($sucesso) { 
-       header("location: index.php");
+    if($sucesso) {
+       header("location: login.php");
     }else {
         include 'components/head.php';
         include 'components/header.php';
