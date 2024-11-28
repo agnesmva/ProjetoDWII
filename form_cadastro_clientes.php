@@ -8,8 +8,8 @@
         <input type="text" id="nome" name="nome" size="30" maxlength="30" required>
     </div>
     <div>
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" size="10" maxlength="10" required>
+        <label for="cep">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" size="10" maxlength="10" required>
     </div>
     <div>
         <label for="telefone">Telefone:</label>
@@ -18,6 +18,10 @@
     <div>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" size="15" maxlength="15" required>
+    </div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="text" name="text" size="15" maxlength="15" required>
     </div>
     <div>
         <label for="senha">Senha:</label>

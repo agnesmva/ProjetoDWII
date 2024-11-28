@@ -4,42 +4,30 @@
 
     autenticar();
 
-    include "<admin>conexao.php";
+    include "admin/conexao.php";
 
     $nomeUsuario = htmlspecialchars($_POST["nome"]);
-    $cpfUsuario = htmlspecialchars($_POST["cep"]);
-    $dataNascUsuario = htmlspecialchars($_POST["datanascimento"]);
     $telefoneUsuario = htmlspecialchars($_POST["telefone"]);
-    $emailUsuario = md5htmlspecialchars($_POST["email"]);
+    $emailUsuario = htmlspecialchars($_POST["email"]);
+    $usernameUsuario = htmlspecialchars($_POST["username"]);
     $senhaUsuario = md5htmlspecialchars($_POST["senha"]);
+    $enderecoUsuario = intval($_POST["endereco"]);
 
 
-    $sql = "INSERT INTO usuario (nomeUsuario,cpfUsuario,dataNascUsuario,telefoneUsuario,emailUsuario,senhaUsuario) VALUES  (:nomeUsuario, :cpfUsuario, :dataNascUsuario, :telefoneUsuario, :senhaUsuario, :emailUsuario, :senhaUsuario)";
+    $sql = "INSERT INTO usuario (nome,telefone,email,username,senha,endereco) VALUES  (:nomeUsuario, :telefoneUsuario, :emailUsuario, :usernameUsuario, :senhaUsuario, :enderecoUsuario)";
     
     
 
     $command = $pdo->prepare($sql);
     $command->bindParam(":nomeUsuario", $nomeUsuario);
-    $command->bindParam(":cpfUsuario", $cpfUsuario);
-    $command->bindParam(":datanascimento", $dataNascUsuario);
-    $command->bindParam(":telefone", $telefoneUsuario);
+    $command->bindParam(":telefoneUsuario", $telefoneUsuario);
     $command->bindParam(":emailUsuario", $emailUsuario);
+    $command->bindParam(":usernameUsuario", $usernameUsuario);
     $command->bindParam(":senhaUsuario", $senhaUsuario);
-    $command->execute();
+    $command->bindParam(":enderecoUsuario", $enderecoUsuario);
 
-    $sql = "SELECT idUsuario FROM usuario WHERE nomeUsuario = :nomeUsuario AND cpfUsuario = :cpfUsuario";
-    $command = $pdo->prepare($sql);
-    $command->bindParam(":nomeUsuario", $nomeUsuario);
-    $command->bindParam(":cpfUsuario", $cpfUsuario);
-    $query = $commando->execute();
-    $idUsuario = $query['idUsuario'];
-
-    $sql = "INSERT INTO telefoneUsuario (telefoneUsuario,idUsuario) VALUES (:telefoneUsuario, :idUsuario)";
-    $command = $pdo->prepare($sql);
-    $command->bindParam(":telefoneUsuario" , $telefoneUsuario);
-    $command->bindParam(":idUsuario" , $idUsuario);
-    $sucess = $command->execute;
-    
+    $sucesso = $command->execute();
+   
 
     if($sucesso) { 
        header("location: http://localhost/admin/login.php");
