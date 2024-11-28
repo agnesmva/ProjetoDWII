@@ -3,12 +3,15 @@
 include "include/functions.php";
 
 autenticar();
+
+include 'components/head.php';
+include 'components/header.php';
 ?>
 <h2>Cadastro de novo Cliente </h2>
 <main>
 <form action="cadastrar_cliente.php" method="POST">
     <div>
-        <label for="nome">Nome: </label>
+        <label for="nome">nome: </label>
         <input type="text" id="nome" name="nome" size="30" maxlength="30" required>
     </div>
     <div>
