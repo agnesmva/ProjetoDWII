@@ -7,18 +7,12 @@
         $_SESSION["admin"] = $_POST["username"];
         header("Location: http://localhost:3030/adm/index.php");
     }
-
+    else{
+        include "include/header.php"; 
+        include "include/head.php"; 
+    }
+    
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>FatecShop - Admin</title>
-</head>
-<body>
-    <header> <h1>Área Administrativa</h1></header>
     <main>
         <div>
             <h1>Acesso Negado</h1>
@@ -30,6 +24,4 @@
         
         
     </main>
-    <footer></footer>
-</body>
-</html>
+<?php "include/footer.php";?>
