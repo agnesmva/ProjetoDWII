@@ -1,11 +1,9 @@
 <?php
+include "include/functions.php";
+include "include/conection.php";
 
-    include "../admin/processamento/functions.php";
-
-    autenticar();
-
-    include "admin/conexao.php";
-
+autenticar();
+   
     $nomeUsuario = htmlspecialchars($_POST["nome"]);
     $telefoneUsuario = htmlspecialchars($_POST["telefone"]);
     $emailUsuario = htmlspecialchars($_POST["email"]);

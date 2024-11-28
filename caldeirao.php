@@ -1,9 +1,10 @@
 <?php
-session_start();
+include "include/functions.php";
+include "include/conection.php";
 
-include "cabecalho.php";
 
-include "admin/conexao.php";
+
+
 
 $id = session_id(); 
 
@@ -26,6 +27,10 @@ $comando = $pdo->prepare($sql);
 $comando->bindParam(":sessao", $id);
 $comando->execute();
 $res = $comando->fetchAll();
+
+
+include 'components/head.php';
+include 'components/header.php';
 ?>
 
 <main>
@@ -67,4 +72,7 @@ $res = $comando->fetchAll();
     <?php endif; ?>
 </main>
 
-<?php include "footer.php" ?>
+<?php
+include 'components/footer.php';
+include 'components/foot.php';
+?>

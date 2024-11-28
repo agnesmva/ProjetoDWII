@@ -1,5 +1,9 @@
-<?php include "cabecalho.php"?>
+<?
 
+include "include/functions.php";
+
+autenticar();
+?>
 <h2>Cadastro de novo Cliente </h2>
 <main>
 <form action="cadastrar_cliente.php" method="POST">
