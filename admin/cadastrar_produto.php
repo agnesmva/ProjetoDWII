@@ -1,12 +1,19 @@
-<?php 
+<?php
+
 include "processamento/functions.php";
 include "../connection/conexao.php";
-?>
+$codigo = htmlspecialchars($_GET["codigo"]);
 
-    <main>
-        <section>
-            <img src="https://i.etsystatic.com/19827764/r/il/d201f2/3517944624/il_1140xN.3517944624_cv6p.jpg" alt="">
-        </section>
+$sql = "SELECT id, nome, descricao, tipo, preco_unitario FROM produtos WHERE id = :cod;"; //string com o comando SQL a ser executado
+
+$comando = $pdo->prepare($sql);   //montamos e deixamos o SQL preparado
+
+$comando -> bindParam(":cod", $codigo);
+$comando->execute();
+
+$res = $comando->fetch();
+?>
+<main>
         <ul>
             <li>Cadastrar Produtos</li>
             <form action="cadastrar_produto.php" method="POST">
@@ -27,13 +34,8 @@ include "../connection/conexao.php";
                     <select name="typeProduct" id="typeProduct" require>
                         <option value="" disabled selected>Selecione um Tipo de Produto<option>
                             
-                        <option>CD</option>
-                        <option>Livro</option>
-                        <option>Game</option>
-                        <option>Informática</option>
-                        <option>DVD</option>
-                        <option>Mídia Digital</option>
-                        <option>Gift Card</option>
+                        <option>Poção</option>
+                        <option>Ingredientes</option>
                     </select>
                 </div>
                 <div>
@@ -43,6 +45,3 @@ include "../connection/conexao.php";
             <li><a href="listar_produtos.php">Listar produtos cadastros</a></li>
         </ul>
     </main>
-    <footer></footer>
-</body>
-</html>

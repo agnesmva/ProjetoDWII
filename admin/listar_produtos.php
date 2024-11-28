@@ -15,8 +15,8 @@ $resultado = $comando->fetchAll(); //executamos o comando "pegando tudo", FETCHA
 include "include/head.php";
 include "include/header.php";
 ?>
-<main>
-        <table>
+<main class="lista">
+    <table>
             <thead>
                 <tr>
                     <td>COD.</td>
@@ -36,10 +36,12 @@ include "include/header.php";
                     <td><?= $produto["tipo"]?></td>
                     <td><img src="../<?= $produto["url_foto"]?>" alt="" width="80px"></td>
                     <td><?= $produto["preco_unitario"]?></td>
-                    <td><a href="excluir_produto.php?codigo=<?=$produto["id"]?>">Deletar</a></td>
-                    <td><a href="alterar_produto.php?codigo=<?=$produto["id"]?>">Editar</a></td>
+                    
+                    <td><a href="alterar_produto.php?id=<?=$produto["id"]?>">Editar</a></td>
+                    <td><a href="excluir_produto.php?id=<?=$produto["id"]?>">Deletar</a></td>
                 </tr>
                 <?php } ?>
             </tbody>
         </table>
+       
     </main>
