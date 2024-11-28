@@ -1,6 +1,6 @@
 <?php
 include "include/functions.php";
-include "include/conection.php";
+include "include/conexao.php";
 
 autenticar();
    
