@@ -14,25 +14,26 @@ include 'components/head.php';
 include 'components/header.php';
 ?>
 <main>
-    <section>
-        <?php
-        if (isset($_SESSION['name'])) {
-        ?>
-            <div>
-                <h2>Olá, <?= $_SESSION['name'] ?> </h2>
-            </div>
-        <?php
+    <?php
+        if (isset($_SESSION['nome'])) {
+            $msg = 'Olá, $_SESSION[\'nome\']!';
+        }else{
+            $msg = 'Olá, anony!';
         }
-        ?>
-    </section>
+        include 'components/glasscontainer.php';
+    ?>
 
-    <section id="secaoPocoes">
-        <h2>Poções</h2>
+    <section id="secaoPocoes" class="container-fluid m-4">
+        <?php
+        $size = 2;
+        $title = "Poções";
+        include 'components/lefttitle.php';
+        ?>
         <div class="row">
             <?php
             foreach ($pocoes as $pocao) {
             ?>
-                <div class="col-6 mb-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 mb-4">
                     <?php
                     $id = $pocao['id'];
                     $img = $pocao['url_foto'];
@@ -48,13 +49,17 @@ include 'components/header.php';
         </div>
     </section>
 
-    <section id="secaoIngredientes">
-        <h2>Ingredientes</h2>
+    <section id="secaoIngredientes" class="container-fluid m-4">
+        <?php
+        $size = 2;
+        $title = "Ingredientes";
+        include 'components/lefttitle.php';
+        ?>
         <div class="row">
             <?php
             foreach ($ingredientes as $ingrediente) {
             ?>
-                <div class="col-6 mb-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 mb-4">
                     <?php
                     $id = $ingrediente['id'];
                     $img = $ingrediente['url_foto'];
