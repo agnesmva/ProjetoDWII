@@ -16,11 +16,9 @@ include "admin/include/conexao.php";
       $sucesso = $comando->execute();
 
       if ($sucesso) {
-          header("Location: http://localhost/projetodwll/admin/listar_produtos.php");
+          header("Location: http://localhost/projetodwll/public/caldeirao.php.php");
       }
   
-      header("Location: caldeirao.php");
-      exit;
   }
 ?>
 <h1 style="color: red">FALHA AO ADICIONAR O PRODUTO AO CARRINHO </h1>
