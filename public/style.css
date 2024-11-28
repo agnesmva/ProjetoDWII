@@ -1,7 +1,182 @@
-header{
-    background-color: aliceblue;
+/* fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Yeseva+One&display=swap');
+
+.yeseva-one-regular {
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.imgpocao{
-    width: 100px;
+.cormorant {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* everything */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--fontePrincipal);
+}
+
+/* variable declaration */
+
+:root {
+    --fontePrincipal: Cormorant;
+    --fonteDestaque: Yeseva One;
+    --verdeescuro: #3C5233;
+    --verdeclaro: #BACDB0;
+    --roxoescuro: #3F3244;
+    --roxoclaro: #B3A1BA;
+    --branco: #F4F7F3;
+    --preto: #221A23;
+    --transparente: #bacdb029;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+#mainheader {
+    padding: 80px;
+    background-color: var(--verdeescuro);
+}
+
+#mainheader h1 {
+    font-family: var(--fonteDestaque);
+    color: var(--branco);
+    font-size: 4em;
+}
+
+/* nav */
+
+.nav-item {
+    margin: 10px;
+}
+
+.btnNav {
+    background-color: var(--verdeclaro);
+    color: var(--verdeescuro);
+
+    padding: 5px 15px;
+    border-radius: 20px;
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btnNav:hover {
+    background-color: var(--roxoescuro);
+    color: var(--roxoclaro);
+}
+
+/* main */
+
+main {
+    flex: 1;
+    background-color: var(--branco);
+
+    height: fit-content;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+
+/* index */
+
+#secaoPocoes h2,
+#secaoIngredientes h2 {
+    color: var(--roxoescuro);
+    font-family: Yeseva One;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* cardproduto */
+
+.cardproduto {
+    background-color: var(--transparente);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.divimgproduto{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgproduto {
+    margin: 0 auto;
+    max-height: 150px;
+    width: auto;
+}
+
+.btnMais{
+    background-color: var(--roxoescuro);
+    color: var(--roxoclaro);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btnMais:hover{
+    background-color: var(--verdeescuro);
+    color: var(--verdeclaro);
+}
+
+/* glass container */
+
+.glasscontainer {
+    background-color: var(--transparente);
+
+    padding: 40px;
+    min-height: 300px;
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+
+    text-align: left;
+}
+
+.glasscontainer div {
+    height: 100px;
+    margin: 40px 0px;
+}
+
+.glasscontainer h2 {
+    color: var(--cor05);
+}
+
+/* footer */
+
+#footer{
+    padding: 40px;
+    background-color: var(--verdeescuro);
+}
+
+#footer p{
+    color: var(--branco);
 }
