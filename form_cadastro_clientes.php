@@ -36,5 +36,8 @@ autenticar();
     </div>
 </form>
 </main>
-<?php include "footer.php" ?>
+<?php
+include 'components/footer.php';
+include 'components/foot.php';
+?>
       
