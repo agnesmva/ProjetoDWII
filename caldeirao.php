@@ -5,8 +5,10 @@ include "cabecalho.php";
 
 include "admin/conexao.php";
 
+$id = session_id(); 
+
 $sql = "SELECT 
-            p.nome AS nomepocao, 
+            p.nome AS nomePocao, 
             p.preco_unitario AS preco,
             p.tipo AS tipo, 
             c.quantidade AS quantidade,
