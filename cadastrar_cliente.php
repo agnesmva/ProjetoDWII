@@ -8,7 +8,7 @@ autenticar();
     $telefoneUsuario = htmlspecialchars($_POST["telefone"]);
     $emailUsuario = htmlspecialchars($_POST["email"]);
     $usernameUsuario = htmlspecialchars($_POST["username"]);
-    $senhaUsuario = md5htmlspecialchars($_POST["senha"]);
+    $senhaUsuario = md5(htmlspecialchars($_POST["senha"]));
     $enderecoUsuario = intval($_POST["endereco"]);
 
 

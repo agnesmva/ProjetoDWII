@@ -4,8 +4,11 @@ switch ($_SERVER['REQUEST_URI']) {
     case '/admin/login.php':
         $tituloPagina = " Administração Apotecário de Renard";
         break;
+    case '/admin/listar_produtos.php':
+      $tituloPagina = " Administração Apotecário de Renard";
+      break;
     default:
-        header("Location: /index");
+        echo 'insira a rota no arquivo de head corretamente';
         break;
 }
 ?>
