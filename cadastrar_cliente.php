@@ -1,21 +1,16 @@
 <?php
-include "admin/include/functions.php";
-include "admin/include/conexao.php";
-
-
-autenticar();
+include "connection/conexao.php";
    
     $nomeUsuario = htmlspecialchars($_POST["nome"]);
     $telefoneUsuario = htmlspecialchars($_POST["telefone"]);
     $emailUsuario = htmlspecialchars($_POST["email"]);
     $usernameUsuario = htmlspecialchars($_POST["username"]);
     $senhaUsuario = md5(htmlspecialchars($_POST["senha"]));
-    $enderecoUsuario = intval($_POST["endereco"]);
+    // $enderecoUsuario = intval($_POST["endereco"]);
+    $enderecoUsuario = 1;
 
 
-    $sql = "INSERT INTO usuario (nome,telefone,email,username,senha,endereco) VALUES  (:nomeUsuario, :telefoneUsuario, :emailUsuario, :usernameUsuario, :senhaUsuario, :enderecoUsuario)";
-    
-    
+    $sql = "INSERT INTO cliente (nome,telefone,email,username,senha,id_endereco) VALUES  (:nomeUsuario, :telefoneUsuario, :emailUsuario, :usernameUsuario, :senhaUsuario, :enderecoUsuario)";
 
     $command = $pdo->prepare($sql);
     $command->bindParam(":nomeUsuario", $nomeUsuario);
@@ -24,23 +19,31 @@ autenticar();
     $command->bindParam(":usernameUsuario", $usernameUsuario);
     $command->bindParam(":senhaUsuario", $senhaUsuario);
     $command->bindParam(":enderecoUsuario", $enderecoUsuario);
-
     $sucesso = $command->execute();
-   
+    $sucesso = 0;
 
     if($sucesso) { 
-       header("location: http://localhost/admin/login.php");
+       header("location: index.php");
     }else {
-        include '../view/components/head.php';
-        include '../view/components/header.php';
+        include 'components/head.php';
+        include 'components/header.php';
+?>
+<main>
+    <div class="container-fluid cadastroNaoSucedido">
+        <?php
+            $size = 2;
+            $title = 'Uma força mágica desconhecida impediu a criação de seu perfil. Verifique se todos os campos estão preenchidos corretamente.';
+            include 'components/centertitle.php';
         ?>
-        <main>
-            <p>FALHA AO CADASTRAR</p>
-            <a href="../view/sigin.php">Tentar novamente</a>
-         </main>
-         <?php
-           include '../view/components/footer.php';
-           include '../view/components/foot.php';
+        <div class="row align-items-center justify-content-center centertitle">
+            <div class="col-6 align-items-center justify-content-center text-center">
+                <a class="btnVoltarSignin" href="form_cadastro_clientes.php">A alquimia exige paciência. Realize outra transmutação.</a>
+            </div>
+        </div>
+    </div>
+</main>
+<?php
     }
-
+    include 'components/footer.php';
+    include 'components/foot.php';
 ?>

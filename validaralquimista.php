@@ -31,7 +31,7 @@
         ?>
         <div class="row align-items-center justify-content-center centertitle">
             <div class="col-6 align-items-center justify-content-center text-center">
-                <a class="btnVoltarLogin" href="login.php">A alquimia exige paciência. Realize outra transmutação.</a>
+                <a class="btnVoltarLogin" href="login.php">A alquimia exige paciência. Realize outra materialização.</a>
             </div>
         </div>
     </div>

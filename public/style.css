@@ -149,7 +149,7 @@ main {
 
 /* glass container */
 
-.glasscontainer, .secaoProduto, .usuarioNaoEncontrado, .login {
+.glasscontainer, .secaoProduto, .usuarioNaoEncontrado, .login, .caldeiraovazio, .signin, .cadastroNaoSucedido {
     background-color: var(--transparente);
 
     padding: 40px;
@@ -231,12 +231,12 @@ main {
 
 /* login / validar alquimista */
 
-.usuarioNaoEncontrado h2{
+.usuarioNaoEncontrado h2, .cadastroNaoSucedido h2{
     font-family: Yeseva One;
     color: var(--roxoescuro);    
 }
 
-.usuarioNaoEncontrado .btnVoltarLogin{
+.usuarioNaoEncontrado .btnVoltarLogin, .btnVoltarSignin{
     color: var(--roxoclaro);
     width: 400px;
     padding: 10px 20px;
@@ -246,7 +246,7 @@ main {
     text-decoration: none;
 }
 
-.usuarioNaoEncontrado .btnVoltarLogin:hover{
+.usuarioNaoEncontrado .btnVoltarLogin:hover, .btnVoltarSignin:hover{
     color: var(--roxoescuro);
 }
 
@@ -267,7 +267,7 @@ main {
     color: var(--roxoescuro);
 }
 
-.btnMaterializar{
+.btnMaterializar, .btnTransmutar{
     background-color: var(--verdeescuro);
     color: var(--verdeclaro);
     width: 150px;
@@ -279,4 +279,11 @@ main {
 .btnMaterializar:hover{
     background-color: var(--verdeclaro);
     color: var(--verdeescuro);
+}
+
+/* caldeirao */
+
+.secaoCaldeirao h2{
+    font-family: var(--fonteDestaque);
+    color: var(--roxoescuro);
 }

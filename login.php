@@ -7,7 +7,7 @@ include 'components/header.php';
         <div class="container-fluid">
             <?php
             $size = 3;
-            $title = 'Olá, alquimista!';
+            $title = 'Que bom te ver novamente, Alquimista!';
             include 'components/centertitle.php';
             ?>
         </div>
@@ -36,7 +36,7 @@ include 'components/header.php';
                 </div>
                 <div class="row d-flex justify-content-center">
                     <p class="col-12 text-center">
-                        <a href="signin.php">Deseja transmutar sua realidade? Inicie sua jornada alquímica agora mesmo.</a>
+                        <a href="form_cadastro_clientes.php">Deseja transmutar sua realidade? Inicie sua jornada alquímica agora mesmo.</a>
                     </p>
                 </div>
             </div>
