@@ -1,29 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>FatecShop - Admin</title>
-</head>
-<body>
-    <header> <h1>Área Administrativa</h1></header>
-    <main>
-       
-        <form action="validate.php" method="POST">
+<?php 
+include "include/header.php"; 
+include "include/head.php"; 
+include "processamento/validarLogin.php"
+?>
+    <main class="login">
+        <section></section>
+        <form action="processamento/validarLogin.php" method="POST">
             <div>
-                <label for="login">Login</label>
-                <input type="text" name="username" placeholder="insira seu login" require>
+                <p>Login Administração</p>
             </div>
             <div>
-                <label for="senha">Senha</label>
-                <input type="password" name="password" placeholder="insira sua senha" require>
+                <label for="login">
+                <i class="bi bi-person-circle"></i>
+                <input type="text" name="username" placeholder="username" require>
+                </label>
+                
             </div>
             <div>
-                <button>Enviar</button>
+                <label for="senha">
+                <i class="bi bi-key"></i>
+                <input type="password" name="senha" id="senha" placeholder="senha" require >
+                </label>
+                
+            </div>
+            <div>
+                <button>Gerenciar</button>
+                <p>Não possui login?</p>
+                
+            </div>
+            <div>
+            <a href="cadastro.php">Criar uma conta</a> 
             </div>
         </form>
     </main>
-    <footer></footer>
-</body>
-</html>
+<?php include "include/footer.php"; ?>

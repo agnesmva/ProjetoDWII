@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Joti+One&family=Sevillana&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Urbanist", sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(255,102,196);
+    background: linear-gradient(121deg, rgba(255,102,196,0.9023984593837535) 0%, rgba(151,215,0,0.8155637254901961) 100%);
+}
+.joti-Titulo {
+    font-family: "Sevillana", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+.login {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .login section {
+    width: 50%;
+    height: 100%;
+   
+  }
+  
+  
+  .login form {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para os botões e outros elementos podem ser adicionados aqui */
+  
+  /* Exemplo de animação ao clicar no botão */
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+  }
+
+ 
+  /* Form */
+  .login form {
+    width: 100%;
+   background-color: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15%;
+  }
+
+  .login p{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* Input fields */
+  .login input {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    flex: 5;
+    width: 100%;
+  }
+  
+  /* Label */
+  .login label {
+background-color: #fff;
+   width: 90%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px;
+   margin-bottom: 15px;
+   border-style: none;
+   border-radius: 35px;
+  }
+  .login div i{
+    flex: 1;
+    text-align: center;
+    color: #388e3c;
+    font-size: 18px;
+  }
+
+
+  
+  /* Button */
+  .login button {
+    background: #4caf50;
+    color: #fff;
+    width: 50%;
+    padding: 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .login button:hover {
+    background: #388e3c;
+  }
+  
+  /* Links */
+  a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Links hover effect */
+  a:hover {
+    color: #007bff;
+  }
+  
+  /* Centered content */
+  .centered {
+    text-align: center;
+  }
