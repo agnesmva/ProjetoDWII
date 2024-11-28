@@ -14,23 +14,21 @@ include 'components/head.php';
 include 'components/header.php';
 ?>
 <main>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-                <img src="<?= $produto['url_foto']; ?>" alt="">
+    <div class="container-fluid secaoProduto">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-3">
+                <img src="<?= $produto['url_foto']; ?>" class="imgproduto2 img-fluid">
             </div>
             <div class="col-6">
                 <h3><?= $produto['nome']; ?></h3>
-                <p><?= $produto['tipo']; ?></p>
-                <p><?= $produto['preco_unitario']; ?></p>
-                <p><?= $produto['descricao']; ?></p>
+                <p class="categoria"><?= $produto['tipo']; ?></p>
+                <p class="preco">R$ <?= $produto['preco_unitario']; ?></p>
+                <p class="descricao"><?= $produto['descricao']; ?></p>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-12 justify-content-center d-flex">
-                <button>
-                    <a href="adicionarCaldeirao.php?id=<?= $produto['id'] ?>">Adicionar ao caldeirão</a>
-                </button>
+            <div class="col-6 justify-content-end d-flex">
+                <a href="adicionarCaldeirao.php?id=<?= $produto['id'] ?>" class="btnAddCaldeirao">Adicionar ao caldeirão</a>
             </div>
         </div>
     </div>

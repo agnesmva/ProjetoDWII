@@ -49,12 +49,12 @@ body {
 
 #mainheader {
     padding: 80px;
-    background-color: var(--verdeescuro);
+    background-color: var(--verdeclaro);
 }
 
 #mainheader h1 {
     font-family: var(--fonteDestaque);
-    color: var(--branco);
+    color: var(--verdeescuro);
     font-size: 4em;
 }
 
@@ -149,7 +149,7 @@ main {
 
 /* glass container */
 
-.glasscontainer {
+.glasscontainer, .secaoProduto {
     background-color: var(--transparente);
 
     padding: 40px;
@@ -179,4 +179,52 @@ main {
 
 #footer p{
     color: var(--branco);
+}
+
+/* pagina produto */
+
+.imgproduto2{
+    margin: 0 auto;
+    min-height: 50%;
+    width: auto;
+}
+
+.secaoProduto h3{
+    font-family: var(--fonteDestaque);
+    color: var(--roxoescuro);
+}
+
+.secaoProduto .categoria{
+    width: fit-content;
+    background-color: var(--roxoclaro);
+    color: var(--roxoescuro);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.secaoProduto .preco{
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--roxoescuro);
+}
+
+.secaoProduto .descricao{
+    color: var(--roxoescuro);
+}
+
+.btnAddCaldeirao{
+    background-color: var(--roxoescuro);
+    color: var(--roxoclaro);
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btnAddCaldeirao:hover{
+    color: var(--roxoescuro);
+    background-color: var(--roxoclaro);
 }
