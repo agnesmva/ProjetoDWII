@@ -1,12 +1,15 @@
 <?php
-session_start();
+include "include/functions.php";
+include "include/conection.php";
 
-include "cabecalho.php";
 
-include "admin/conexao.php";
+
+
+
+$id = session_id(); 
 
 $sql = "SELECT 
-            p.nome AS nomepocao, 
+            p.nome AS nomePocao, 
             p.preco_unitario AS preco,
             p.tipo AS tipo, 
             c.quantidade AS quantidade,
@@ -24,6 +27,10 @@ $comando = $pdo->prepare($sql);
 $comando->bindParam(":sessao", $id);
 $comando->execute();
 $res = $comando->fetchAll();
+
+
+include 'components/head.php';
+include 'components/header.php';
 ?>
 
 <main>
@@ -65,4 +72,7 @@ $res = $comando->fetchAll();
     <?php endif; ?>
 </main>
 
-<?php include "footer.php" ?>
+<?php
+include 'components/footer.php';
+include 'components/foot.php';
+?>
